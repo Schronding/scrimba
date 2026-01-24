@@ -1,0 +1,50 @@
+div {
+    max-width: 150mm;
+    position: absolute;
+    top: 25%;
+    left: 10%; 
+}
+
+body {
+    background-image: url("FruitElio.png");
+    background-size: cover;
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+    text-emphasis-color: white;
+    text-shadow: 5mm;
+    color: white; 
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white; 
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white; 
+}
+
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#increment-btn {
+    background: purple;
+}
+
+#save-btn {
+    background: blue;
+}
+
