@@ -1,0 +1,51 @@
+.hero{
+    /* It is very interesting that when the image does
+    not fill the width by itself it repeats multiple time
+    to do so */
+
+    /* Another interesting thing is that as I linked 
+    the background image with the div it cuts the image 
+    to fill just enough of the other elements in the div
+    
+    It also does this in the vertical position. I
+    image the best for my application would be to limit
+    the div to the specific size of my image or to
+    resize the image down to the size of the div*/
+    width: 720px; 
+    height: 343px;
+    background-image: url("./images/arcos_queretaro.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    /* While I have left all the 3 "space" characteristics
+    my image is still not going to the borders of the 
+    browser */ 
+    /* The problem here is that my browser seems to be
+    gigantic, as the image is left in the left upper corner
+    of my browser */
+}
+
+body{
+}
+
+h1, h3 {
+    text-align: center;
+    /* It is so interesting that even if I put my margin
+    to 0 pixels the div stil leaves some whitespace around
+    it*/ 
+}
+
+#visit-msg{
+
+    padding: 20px;
+}
+
+.main-txt-btn{
+    background-color: lightblue;
+    
+    /* Is there a way to describe this div to be 
+    a certain of pixels larger than the text it contains?
+    I understand it seems backwards but it is what I could
+    have come with*/ 
+}
