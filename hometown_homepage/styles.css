@@ -11,10 +11,31 @@
     image the best for my application would be to limit
     the div to the specific size of my image or to
     resize the image down to the size of the div*/
-    width: 720px; 
     height: 343px;
+    /*While I removed the height in order to have the 
+    image cover the whole browser, now I see that the
+    default responsive design is making so when the 
+    window is small, I can see the "legs" of the arcos,
+    but when the browser is wide open I cannot see 
+    them anymore, I can just see the top.*/
     background-image: url("./images/arcos_queretaro.jpg");
+
+    /*It seems that cover means "fill the whole box, keep
+    aspect ratio". I can change it to contain. The description
+    in VSCode says "Scale the image, while preserving its 
+    intrinsic aspect ratio (if any), to the largest size 
+    such that both its width and its height can fit inside 
+    the background positioning area". It doesn't seem to be
+    the appropriate solution for my case */
     background-size: cover;
+
+    /* It seems that I can prevent the background image
+    from repeating with the command below*/
+    background-repeat: no-repeat;
+
+    /*It seems that the reason why I am getting whitespace
+    to my hero section despite having everything in zero is
+    that the browser has a default margin of around 8 pixels.*/ 
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -23,7 +44,12 @@
     browser */ 
     /* The problem here is that my browser seems to be
     gigantic, as the image is left in the left upper corner
-    of my browser */
+    of my browser. The AI says that the problem is that is 
+    expected with fixed-sized elements. That I must center 
+    it or make it "fluid" in order to solve it*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body{
@@ -43,9 +69,68 @@ h1, h3 {
 
 .main-txt-btn{
     background-color: lightblue;
-    
     /* Is there a way to describe this div to be 
     a certain of pixels larger than the text it contains?
     I understand it seems backwards but it is what I could
     have come with*/ 
+}
+
+.all-activities{
+    width: 720px;
+    height: 348px;
+    /* Is there a way to select all the images that are 
+    inside this div and apply style to them?*/
+    display: flex;
+
+    /*Even though I try to put a border of 50% in order to
+    get a circle the images are displayed one after the other
+    in rectangles. I feel that I might be doing way too much
+    work by creating such specific ids and classes. It might 
+    be probably because I am on the parent div, not the specific 
+    one!*/
+    border-image: 50%;
+    background-color: lightslategrey;
+
+    /* Here I don't understand why I am getting a different 
+    size for each activity... should I force their size manually?
+    the temple of Santa Rosa de Viterbo is consuming almost twice
+    the size that the acueduct of Queretaro*/
+    justify-content: center;
+    align-items: center;
+}
+
+.activities{
+    /*That wasn't it...*/ 
+    border-radius: 50%;
+    border-image: 50%;
+    
+    /*While the images are still not centered the padding makes 
+    them look quite nice*/
+    padding: 30px;
+
+}
+
+.activities-picture{
+    /*Finally! Creating the class for the images was a good
+    choice*/
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    /*I think these two show that images are not display
+    block... but how might I center them? */ 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.activities-description{
+    color: whitesmoke;
+}
+
+.activities-title{
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+#three-activities{
 }
