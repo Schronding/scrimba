@@ -52,9 +52,6 @@
     margin-right: auto;
 }
 
-body{
-}
-
 h1, h3 {
     text-align: center;
     /* It is so interesting that even if I put my margin
@@ -63,12 +60,12 @@ h1, h3 {
 }
 
 #visit-msg{
-
+    font-size: 45px;
     padding: 20px;
 }
 
 .main-txt-btn{
-    background-color: lightblue;
+    background-color: a8dadc;
     /* Is there a way to describe this div to be 
     a certain of pixels larger than the text it contains?
     I understand it seems backwards but it is what I could
@@ -76,8 +73,6 @@ h1, h3 {
 }
 
 .all-activities{
-    width: 720px;
-    height: 348px;
     /* Is there a way to select all the images that are 
     inside this div and apply style to them?*/
     display: flex;
@@ -89,7 +84,7 @@ h1, h3 {
     be probably because I am on the parent div, not the specific 
     one!*/
     border-image: 50%;
-    background-color: lightslategrey;
+    background-color: 457b9d;
 
     /* Here I don't understand why I am getting a different 
     size for each activity... should I force their size manually?
@@ -97,6 +92,10 @@ h1, h3 {
     the size that the acueduct of Queretaro*/
     justify-content: center;
     align-items: center;
+}
+
+.subtitle{
+    font-size: 35px;
 }
 
 .activities{
@@ -108,6 +107,20 @@ h1, h3 {
     them look quite nice*/
     padding: 30px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*While I have managed what I wanted to do, I wonder why when I do both
+    justify-content and align-items to center they showed to be centered along
+    the horizontal axis, but when I changed the flex-direction to column now it is
+    centered on the vertical axis... what I mean is that I thought that if both
+    axis are centered, it doesn't matter if it is a column or a row, both should
+    look the same*/
+}
+
+#three-activities-title{
+    font-size: 40px;
 }
 
 .activities-picture{
@@ -125,12 +138,60 @@ h1, h3 {
 
 .activities-description{
     color: whitesmoke;
+    font-size: 20px;
 }
 
 .activities-title{
     color: whitesmoke;
     font-weight: bold;
+    font-size: 25px;
 }
 
 #three-activities{
+    /*It seems I cannot influence the size of the text inside a paragraph 
+    directly... This seems odd, am I forced to use a header tag? When I change
+    it to a header I cannot influence the size of the text directly either. 
+    What I am noticing though is that I might influence the size indirectly 
+    I can't say for sure but at least to me the h1 of the top 3 activites
+    looks bigger than the h1 of the hero. I think that the reason for that
+    is that the hero is inside a div*/
+    color: white;
+    background-color: 1d3557; /*The problem with putting the color straight 
+    to the h1 is that h1 is a block that barely covers the letters. If I 
+    want to see it as a block I need to put it in the div... it didn't worked, it 
+    seems that the div simply takes the size of whatever is inside of it*/
+    height: 50px;
+    margin: 10px auto;    
+}
+
+.guide-info{
+    background-color: e63946;
+    margin: 50px;
+    display: flex;
+    border-radius: 25px;
+    border-bottom: black solid 10px;
+}
+
+/*Colors:
+- e63946 used for guide-info
+- f1faee 
+- a8dadc used for hero
+- 457b9d used for all-activites
+- 1d3557 used for three-activities
+*/
+
+.guide-img{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 35px;
+    border-radius: 25px;
+}
+
+.informative-text{
+    font-size: 30px; /*All this time I could have modified the size of the 
+    text! I just needed to realize it was not text but font the keyword that 
+    I needed. */
+    margin: 35px 30px;
+    color: whitesmoke;
+    text-align: center;
 }
