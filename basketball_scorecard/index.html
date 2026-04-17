@@ -1,0 +1,46 @@
+<html lang="en"> 
+    <head>
+        <title> Basketball Scoreboard </title>
+        <!-- I have forgottten again how to reference the stylesheet to connect
+        it to the HTML again. I remember now! It is by the link tag-->
+        <link rel="stylesheet" href="styles.css"> <!-- link is a self enclosing
+        tag-->
+        <link rel="script" href="scripts.js"> 
+    </head>
+    <body> 
+        <div class="scoreboard">
+
+            <div class="home-team"> 
+                <h1> HOME </h1>
+
+                <div class="current-score"> 
+                    <h1 id="home-score" script = "./script.js">{home_score} </h1>
+                </div>
+
+                <div class="buttons"> 
+                    <h3> +1 </h3>
+                    <h3> +2 </h3>
+                    <h3> +3 </h3>
+                </div>
+            </div>
+
+            <div class="guest-team"> 
+                <h1> GUEST </h1>
+
+                <div class="current-score"> 
+                    <h1 id="guest-score" class = "./script.js">{guest_score} </h1>
+                </div>
+                <!-- What I don't remember either is how to link the javascript to
+                the tags... I think it was via getElementById() or something
+                like that-->
+
+                <div class="buttons"> 
+                    <h3> +1 </h3>
+                    <h3> +2 </h3>
+                    <h3> +3 </h3>
+                </div>
+            
+            </div>
+        </div>
+    </body>
+</html>
