@@ -1,10 +1,6 @@
 @font-face{
     src: url(./timer-font.ttf);
     font-family: TimerFont; 
-    /* For a moment I thought that this `font-family` property was a fallback of
-    fonts to use in case my font didn't load it correctly, but it seems it is 
-    literally putting the name of the font to use, as in `.current-score` I use
-    it to correctly put the eight-segment display font. */
 }
 .scoreboard{
     width: 700px;
@@ -12,11 +8,8 @@
     background-color: blue;
     padding: 50px;
     margin: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* Regardless of what I do I keep having one column with all the content...
-    I see it now, I didn't put that the class should be `display:flex` */
+    display: flex; 
+    /* I don't remember what I moved for the quest block to be lower. */
     border-radius: 30px;
 }
 
@@ -35,16 +28,20 @@
 }
 
 .home-team{
-    margin-right: 10px;
+    margin-right: auto;
+    /* I like more the `auto` keyword as I feel it provides way more responsivity
+    to the layout */ 
 }
 
 .home-team h1 {
-    margin: 0 auto;
-    /* Here */ 
+    margin: 1rem auto;
+    /* I recall in a tutorial that I saw that what is normally used in webpages is 
+    REM, which seems to simply be a multiple of 16 pixels. I assume that there must
+    be something with that number that is naturally pleasing to our eyes */ 
 }
 
 .guest-team{
-    margin-left: 10px;
+    margin-left: 0;
 }
 
 body{
@@ -59,4 +56,5 @@ body{
 .buttons h3{
     padding: 10px;
     border: antiquewhite solid 3px;
+    border-radius: 10px;
 }

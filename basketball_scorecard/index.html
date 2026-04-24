@@ -1,11 +1,14 @@
 <html lang="en"> 
     <head>
         <title> Basketball Scoreboard </title>
-        <!-- I have forgottten again how to reference the stylesheet to connect
-        it to the HTML again. I remember now! It is by the link tag-->
-        <link rel="stylesheet" href="styles.css"> <!-- link is a self enclosing
-        tag-->
-        <link rel="script" href="scripts.js"> 
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"> </script>
+        <!-- I assume that just like with Astro whatever goes 
+        inside the script tag affects whatever block of HTML I 
+        decide to target, as I also recall that there is both
+        inline styling and scripting. That the arrows aren't 
+        considered comments inside the tag makes me believe
+        that so much more. --> 
     </head>
     <body> 
         <div class="scoreboard">
@@ -15,12 +18,19 @@
 
                 <div class="current-score"> 
                     <h1 id="home-score" script = "./script.js">{home_score} </h1>
+                    <!-- As I have put the script already above, I don't think I 
+                    need to comment here again too. I wonder however how does
+                    the `script` attribute of a tag works... Could I put one
+                    separate file for each HTML tag? -->
                 </div>
 
                 <div class="buttons"> 
-                    <h3> +1 </h3>
-                    <h3> +2 </h3>
-                    <h3> +3 </h3>
+                    <h3 id="home-plus-one"> +1 </h3>
+                    <!-- I have doubt here too. I know I can target 
+                    elements by id... but that id is the same one
+                    that is used to reference styling? -->
+                    <h3 id="home-plus-two"> +2 </h3>
+                    <h3 id="home-plus-three"> +3 </h3>
                 </div>
             </div>
 
@@ -28,16 +38,13 @@
                 <h1> GUEST </h1>
 
                 <div class="current-score"> 
-                    <h1 id="guest-score" class = "./script.js">{guest_score} </h1>
+                    <h1 id="guest-score">{guest_score} </h1>
                 </div>
-                <!-- What I don't remember either is how to link the javascript to
-                the tags... I think it was via getElementById() or something
-                like that-->
 
                 <div class="buttons"> 
-                    <h3> +1 </h3>
-                    <h3> +2 </h3>
-                    <h3> +3 </h3>
+                    <h3 id="guest-plus-one"> +1 </h3>
+                    <h3 id="guest-plus-two"> +2 </h3>
+                    <h3 id="guest-plus-three"> +3 </h3>
                 </div>
             
             </div>
