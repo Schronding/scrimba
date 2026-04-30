@@ -3,12 +3,6 @@
         <title> Basketball Scoreboard </title>
         <link rel="stylesheet" href="styles.css">
         <script src="scripts.js"> </script>
-        <!-- I assume that just like with Astro whatever goes 
-        inside the script tag affects whatever block of HTML I 
-        decide to target, as I also recall that there is both
-        inline styling and scripting. That the arrows aren't 
-        considered comments inside the tag makes me believe
-        that so much more. --> 
     </head>
     <body> 
         <div class="scoreboard">
@@ -17,34 +11,39 @@
                 <h1> HOME </h1>
 
                 <div class="current-score"> 
-                    <h1 id="home-score" script = "./script.js">{home_score} </h1>
-                    <!-- As I have put the script already above, I don't think I 
-                    need to comment here again too. I wonder however how does
-                    the `script` attribute of a tag works... Could I put one
-                    separate file for each HTML tag? -->
+                    <h1 id="home-score"> 0 </h1>
+                    <!--The problem with putting 0 is that as it is on the left, 
+                    it resizes the "screen" in which the 0 is being displayed, and
+                    as everything is "responsive" my buttons become crowded again
+                    on the bottom, which is something that I didn't want. -->
                 </div>
 
                 <div class="buttons"> 
-                    <h3 id="home-plus-one"> +1 </h3>
-                    <!-- I have doubt here too. I know I can target 
-                    elements by id... but that id is the same one
-                    that is used to reference styling? -->
-                    <h3 id="home-plus-two"> +2 </h3>
-                    <h3 id="home-plus-three"> +3 </h3>
+                    <button id="home-plus-one"> +1 </button>
+                    <!-- I don't recall if buttons are a self-closing
+                    tag... I don't think so, but it is funny that I
+                    am able to get clickable buttons even though the
+                    closing contigous tags are of h3. -->
+                    <button id="home-plus-two"> +2 </button>
+                    <button id="home-plus-three"> +3 </button>
                 </div>
             </div>
 
             <div class="guest-team"> 
                 <h1> GUEST </h1>
+                <!--Another problem I encounter is that the distance 
+                of the buttons is greater in GUEST as it has an extra 
+                letter compared to HOME, which creates a subtle but 
+                dirty greater spacing between the guest buttons. -->
 
                 <div class="current-score"> 
-                    <h1 id="guest-score">{guest_score} </h1>
+                    <h1 id="guest-score"> 0 </h1>
                 </div>
 
                 <div class="buttons"> 
-                    <h3 id="guest-plus-one"> +1 </h3>
-                    <h3 id="guest-plus-two"> +2 </h3>
-                    <h3 id="guest-plus-three"> +3 </h3>
+                    <button id="guest-plus-one"> +1 </button>
+                    <button id="guest-plus-two"> +2 </button>
+                    <button id="guest-plus-three"> +3 </button>
                 </div>
             
             </div>

@@ -5,11 +5,10 @@
 .scoreboard{
     width: 700px;
     height: 500px;
-    background-color: blue;
+    background: linear-gradient(blue, rgb(53, 53, 217));
     padding: 50px;
     margin: 50px;
     display: flex; 
-    /* I don't remember what I moved for the quest block to be lower. */
     border-radius: 30px;
 }
 
@@ -29,15 +28,10 @@
 
 .home-team{
     margin-right: auto;
-    /* I like more the `auto` keyword as I feel it provides way more responsivity
-    to the layout */ 
 }
 
 .home-team h1 {
     margin: 1rem auto;
-    /* I recall in a tutorial that I saw that what is normally used in webpages is 
-    REM, which seems to simply be a multiple of 16 pixels. I assume that there must
-    be something with that number that is naturally pleasing to our eyes */ 
 }
 
 .guest-team{
@@ -57,4 +51,10 @@ body{
     padding: 10px;
     border: antiquewhite solid 3px;
     border-radius: 10px;
+    /* I don't remember how I managed to do round buttons... I think
+    it was an attribute called "pills" or something like that. */
+    background: transparent; /* As the limits of RGB are white and 
+    black, I wonder how I might be able to make so the background of
+    an element is transparent... I most probably need another 
+    function. */
 }
