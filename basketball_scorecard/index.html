@@ -2,39 +2,27 @@
     <head>
         <title> Basketball Scoreboard </title>
         <link rel="stylesheet" href="styles.css">
-        <script src="scripts.js"> </script>
+        <script src="scripts.js" defer> </script>
     </head>
     <body> 
         <div class="scoreboard">
 
             <div class="home-team"> 
-                <h1> HOME </h1>
+                <h1 class=""> HOME </h1>
 
                 <div class="current-score"> 
                     <h1 id="home-score"> 0 </h1>
-                    <!--The problem with putting 0 is that as it is on the left, 
-                    it resizes the "screen" in which the 0 is being displayed, and
-                    as everything is "responsive" my buttons become crowded again
-                    on the bottom, which is something that I didn't want. -->
                 </div>
 
                 <div class="buttons"> 
                     <button id="home-plus-one"> +1 </button>
-                    <!-- I don't recall if buttons are a self-closing
-                    tag... I don't think so, but it is funny that I
-                    am able to get clickable buttons even though the
-                    closing contigous tags are of h3. -->
                     <button id="home-plus-two"> +2 </button>
                     <button id="home-plus-three"> +3 </button>
                 </div>
             </div>
 
             <div class="guest-team"> 
-                <h1> GUEST </h1>
-                <!--Another problem I encounter is that the distance 
-                of the buttons is greater in GUEST as it has an extra 
-                letter compared to HOME, which creates a subtle but 
-                dirty greater spacing between the guest buttons. -->
+                <h1 class=""> GUEST </h1>
 
                 <div class="current-score"> 
                     <h1 id="guest-score"> 0 </h1>
@@ -45,6 +33,7 @@
                     <button id="guest-plus-two"> +2 </button>
                     <button id="guest-plus-three"> +3 </button>
                 </div>
+
             
             </div>
         </div>

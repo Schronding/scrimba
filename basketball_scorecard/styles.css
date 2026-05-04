@@ -5,11 +5,21 @@
 .scoreboard{
     width: 700px;
     height: 500px;
-    background: linear-gradient(blue, rgb(53, 53, 217));
-    padding: 50px;
-    margin: 50px;
-    display: flex; 
-    border-radius: 30px;
+    /* It looks so well! The problem is exactly the same I have 
+    faced in all the other projects until now: I keep hardcoding
+    the width and height, so I make the design static instead of
+    automatically adapting to whatever size the screen is at that
+    moment... As I think it will take a while, I will continue
+    later. */
+    background: linear-gradient(blue, purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
 }
 
 .current-score{
@@ -19,23 +29,23 @@
 }
 
 #home-score{
+    width: 200px;
+    height: auto;
     padding: 25px 15px;
 }
 
 #guest-score{
+    width: 200px;
+    height: auto;
     padding: 25px 15px;
 }
 
 .home-team{
-    margin-right: auto;
-}
-
-.home-team h1 {
-    margin: 1rem auto;
+    margin: 0px auto;
 }
 
 .guest-team{
-    margin-left: 0;
+    margin: 0px auto;    
 }
 
 body{
@@ -47,14 +57,10 @@ body{
     justify-content: space-around;
 }
 
-.buttons h3{
+.buttons button{
     padding: 10px;
     border: antiquewhite solid 3px;
-    border-radius: 10px;
-    /* I don't remember how I managed to do round buttons... I think
-    it was an attribute called "pills" or something like that. */
-    background: transparent; /* As the limits of RGB are white and 
-    black, I wonder how I might be able to make so the background of
-    an element is transparent... I most probably need another 
-    function. */
+    border-radius: 5px;
+    color: antiquewhite;
+    background-color: transparent;
 }
