@@ -82,3 +82,11 @@ A: An element **can** absolutely have both an ID and multiple classes at the sam
 ## CSS Part 3
 **Q: Text alignment vs Flexbox.**
 A: Your research is correct! `text-align: center;` is the simplest, most appropriate way to center text horizontally inside its block container (like an `h1`). You only need Flexbox (`justify-content`, `align-items`) when you are trying to layout and align multiple entire containers or elements relative to each other.
+
+## CSS Part 4: Responsive Design
+**Q: How can I avoid hardcoding widths and heights so my design adapts automatically to different screen sizes?**
+A: Hardcoding dimensions with fixed units like pixels (`width: 700px; height: 500px;`) makes a design static and rigid. To make a design responsive:
+1. Use relative units: Use percentages (e.g., `width: 100%;`), viewport units (`vw` for viewport width, `vh` for viewport height), or `rem`.
+2. Use constraints: Instead of a fixed `width`, use `max-width: 700px;` combined with `width: 100%;`. This allows the element to be as wide as possible up to 700px, but it will shrink gracefully on smaller screens.
+3. Embrace Flexbox/Grid: You are already using Flexbox! Letting the contents dictate the height (e.g., `height: auto;` or `min-height`) rather than fixing it ensures elements won't overflow their containers when text wraps.
+4. Media Queries: Use `@media (max-width: 600px) { ... }` to change CSS rules entirely for smaller screens (like stacking items vertically instead of horizontally).

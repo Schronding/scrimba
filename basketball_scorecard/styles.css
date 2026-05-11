@@ -3,14 +3,9 @@
     font-family: TimerFont; 
 }
 .scoreboard{
-    width: 700px;
-    height: 500px;
-    /* It looks so well! The problem is exactly the same I have 
-    faced in all the other projects until now: I keep hardcoding
-    the width and height, so I make the design static instead of
-    automatically adapting to whatever size the screen is at that
-    moment... As I think it will take a while, I will continue
-    later. */
+    width: auto;
+    height: 50vw;
+    min-height: 500px;
     background: linear-gradient(blue, purple);
     display: flex;
     justify-content: center;
