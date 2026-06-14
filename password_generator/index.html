@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <!-- I don't recall what was the way to say that I wanted the standard
+    <!-- 0. I don't recall what was the way to say that I wanted the standard
     symbols of the keyboard (that are utf-8 if I don't remember incorrectly). -->
     <head std="utf-8" lang="en">
         <title> Random Password Generator </title>
     </head>
-    <!-- If I recall correctly these attributes were meant to be inserted 
+    <!-- 1. If I recall correctly these attributes were meant to be inserted 
     inline of the body tag.-->
     <body>
+    <!-- 8. I recall that the relationships were put in the head tag, but for now I 
+    will put them on the body to see if it works. I don't think so, as I remember I 
+    needed href and rel in order to connect the CSS, but intellisence doesn't show it
+    to me in neither the body nor the head... I think it was in a link tag!-->
+    <link href="./styles.css" rel="stylesheet">
+    <link href="./scripts.js" rel="script">  
         <div class = "central-square">
-            <!-- If I don't remember incorrectly we used span in order to 
+            <!-- 2. If I don't remember incorrectly we used span in order to 
             emphasize a certain part of the text. -->
             <h1> Generate a <span>random password</span></h1> 
             <p> Never use an insecure password again</p>
-            <button>Generate passwords</button>
+            <button id="btn-create-passwords" onclick="displayPasswords()">Generate passwords</button>
             <div class = "generated-passwords">
-                <div class = "password">
-
+                <div>
+                <!-- 10. I wonder if it is correct to put the class that is supposed
+                to display the password on a div. As it has nothing this div has 0
+                area. Maybe I should create a paragraph instead and treat the div 
+                just as the box that contains the paragraph.-->
+                    <p class = "password-div-one"> </p>
                 </div>
 
-                <div class = "password">
-
+                <div>
+                    <p  class = "password-div-two"> </p>
+                    <!-- 11. I am not seeing the passwords being displayed nonetheless. 
+                    I don't understand why when I pass the mouse over the button it doesn't
+                    transform into the hand with the index finger extended. -->
                 </div>
             </div>
         </div>

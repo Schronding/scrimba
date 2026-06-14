@@ -1,0 +1,34 @@
+/* 3. I don't know if layers@components is standard CSS functionality or if it
+has something to do with TailWind, but for now I will focus on just having
+my color palette with semantic names. */
+
+layer@components{
+    --color-midnight-violet: #22162B;
+    --color-dark-amethyst: #451F55;
+    --color-dusty-grape: #724E91;
+    --color-blush-rose: #E54F6D;
+    --color-saffron: #F8C630;
+}
+
+#btn-create-passwords{
+    cursor: pointer;
+    /* 12. I saw the problem. I defined it as an id but put a dot (.) instead of
+    a hashtag (is that the correct name?) before the class name. Now the hand
+    with the extended finger appears. */
+}
+
+body{
+    background: var(--color-midnight-violet);
+    /* 9. With this at least I know the CSS connected correctly... but it seems
+    I defined my variables incorrectly as I don't see the page loaded with the 
+    color I want. */
+}
+
+.central-square{
+    background: var(--color-dark-amethyst);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
